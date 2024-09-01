@@ -1,22 +1,13 @@
 package refactoring_to_better_design;
 
-interface PaidEmployee {
-    double calculateSalary();
-}
-
-public class Employee implements PaidEmployee {
+abstract class Employee {
     protected String name;
-    protected double baseSalary;
 
-    public Employee(String name, double baseSalary) {
+    public Employee(String name) {
         this.name = name;
-        this.baseSalary = baseSalary;
     }
 
-    @Override
-    public double calculateSalary() {
-        return baseSalary;
-    }
+    public abstract double calculateSalary();
 
     @Override
     public String toString() {

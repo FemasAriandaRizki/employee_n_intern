@@ -1,14 +1,12 @@
 package refactoring_to_better_design;
 
-class UnpaidIntern {
-    protected String name;
-
+class UnpaidIntern extends Intern {
     public UnpaidIntern(String name) {
-        this.name = name;
+        super(name);
     }
 
     @Override
-    public String toString() {
-        return name + " is an unpaid intern.";
+    public double calculateSalary() {
+        return 0; // No salary for unpaid interns
     }
 }
